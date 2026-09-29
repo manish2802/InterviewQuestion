@@ -14,7 +14,7 @@
 # System Design (FR-NFR(SARCLTS)/HLD/LLD/Security/Monitoring)
 # Scenario
 
- * Detect
+ *  Detect
   - High Error rate
   - High Latency
   - Consumer lag
