@@ -7,6 +7,8 @@
 # Microservices
 # Database
 # Design Pattern
+# kafka
+# Redis
 # Cloud
 # Linux
 # DevOps
@@ -22,13 +24,23 @@
     - GC
     - API Latency/error rate
   - DB
-    -
+    - cpu
+    - Connection
+    - Query latency
+    - Lock
   - Redis
+    - Memory
+    - Cpu
+    - Hit Miss
+    - Latency
   - Kakfa
+    - Consumer Lag
+    - Throughput
+    - Partition distribution
+    - Broker health
 
 
  **Detect**
-
   - High Error rate
   - High Latency
   - Consumer lag
@@ -41,5 +53,28 @@
   - Kafka -> Lag increasing
   - Redis -> High Latecy
   - DB -> Slow Query
- 
+
+**Check logs**
+ - ERROR
+ - Exception
+ - Timeout
+ - Connection refused
+ - OutOfMemoryError
+ - Deadlock
+ - Serialization error
+ - Authentication failure
+
+**Check Traces**
+ - Find where latency or failure starts.
+
+**COMPONENT**
+ - Application?
+ - DB?
+ - Redis?
+ - Kafka?
+ - Network?
+ - External API?
+ - Infrastructure?
+
+**ROOT CAUSE**
 
