@@ -14,12 +14,13 @@
 # System Design (FR-NFR(SARCLTS)/HLD/LLD/Security/Monitoring)
 # Scenario
 
+ * Detect
   - High Error rate
   - High Latency
   - Consumer lag
   - CPU / Memory High
   - DB connection High
 
-  - 
+
  
 
