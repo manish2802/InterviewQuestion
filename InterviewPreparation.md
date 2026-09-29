@@ -95,7 +95,7 @@
 **PERMANENT FIX**
 **PREVENTION**
 **MONITORING / ALERT**
- - CPU > 80%
+- CPU > 80%
 - Memory > 80%
 - DB connection pool > 80%
 - Kafka lag > threshold
@@ -110,3 +110,20 @@
   - Partitioning
   - Replication
   - Retry
+  - Idempotency
+  - Outbox
+  - DLQ/Retry Topic
+    
+  - Cache-Aside
+  - TTL
+  - Stampede
+  - Penetration
+  - Avalanche
+  - Hot Key
+  - Cache Inconsistency
+    
+  - DB Pool
+  - Slow Query
+  - DB + Kafka
+    
+  - Redis + Kafka + DB
