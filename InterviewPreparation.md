@@ -78,3 +78,35 @@
 
 **ROOT CAUSE**
 
+**IMMEDIATE MITIGATION**
+ - Redis failure
+ - Kafka consumer lag
+ - DB slow
+
+**RECOVER SERVICE**
+ - Restart unhealthy pod
+ - Failover DB
+ - Recover Redis
+ - Recover Kafka broker
+ - Rollback deployment
+ - Scale application
+ - Clear stuck processing
+
+**PERMANENT FIX**
+**PREVENTION**
+**MONITORING / ALERT**
+ - CPU > 80%
+- Memory > 80%
+- DB connection pool > 80%
+- Kafka lag > threshold
+- Redis memory > threshold
+- API error rate > threshold
+- API latency > threshold
+
+ ** Apply Framework to Topics**
+  - Kafka Producer
+  - Kafka Consumer
+  - Consumer Lag
+  - Partitioning
+  - Replication
+  - Retry
