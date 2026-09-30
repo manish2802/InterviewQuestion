@@ -93,7 +93,9 @@
  - Clear stuck processing
 
 **PERMANENT FIX**
+
 **PREVENTION**
+
 **MONITORING / ALERT**
 - CPU > 80%
 - Memory > 80%
@@ -103,24 +105,24 @@
 - API error rate > threshold
 - API latency > threshold
 
- ** Apply Framework to Topics**
-  - Kafka Producer
-  - Kafka Consumer
-  - Consumer Lag
-  - Partitioning
-  - Replication
-  - Retry
-  - Idempotency
-  - Outbox
-  - DLQ/Retry Topic
+ **Apply Framework to Topics**
+  - Kafka Producer | Publish error | Retry/backoff
+  - Kafka Consumer | Publish error | Restart/retry
+  - Consumer Lag | Lag | Scale consumers
+  - Partitioning | Uneven load
+  - Replication | Broker/replica failure
+  - Retry | Repeated failures
+  - Idempotency | Duplicate processing
+  - Outbox | DB/Kafka mismatch
+  - DLQ/Retry Topic | Repeated failures
     
-  - Cache-Aside
-  - TTL
-  - Stampede
-  - Penetration
-  - Avalanche
-  - Hot Key
-  - Cache Inconsistency
+  - Cache-Aside | High cache miss
+  - TTL | Stale/expired cache
+  - Stampede | Huge simultaneous misses
+  - Penetration | Many nonexistent requests
+  - Avalanche | Many keys expire
+  - Hot Key | One key overloaded
+  - Cache Inconsistency | DB ≠ Redis
     
   - DB Pool
   - Slow Query
