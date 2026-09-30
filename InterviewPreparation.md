@@ -106,23 +106,23 @@
 - API latency > threshold
 
  **Apply Framework to Topics**
-  - Kafka Producer | Publish error | Retry/backoff
-  - Kafka Consumer | Publish error | Restart/retry
-  - Consumer Lag | Lag | Scale consumers
-  - Partitioning | Uneven load
-  - Replication | Broker/replica failure
-  - Retry | Repeated failures
-  - Idempotency | Duplicate processing
-  - Outbox | DB/Kafka mismatch
-  - DLQ/Retry Topic | Repeated failures
+  - Kafka Producer | Publish error | Retry/backoff | Producer configuration + monitoring
+  - Kafka Consumer | Publish error | Restart/retry | Error handling + DLT
+  - Consumer Lag | Lag | Scale consumers | Optimize processing/partitioning
+  - Partitioning | Uneven load | Redistribute workload | Better partition key
+  - Replication | Broker/replica failure | Failover | Proper replication/HA
+  - Retry | Repeated failures | Backoff + limit retries | Retry policy + circuit breaker
+  - Idempotency | Duplicate processing | Detect duplicate | Idempotency key + unique constraint
+  - Outbox | DB/Kafka mismatch | Retry publishing | Transactional Outbox
+  - DLQ/Retry Topic | Repeated failures | Move to retry/DLT | Error classification + replay process
     
-  - Cache-Aside | High cache miss
-  - TTL | Stale/expired cache
-  - Stampede | Huge simultaneous misses
-  - Penetration | Many nonexistent requests
-  - Avalanche | Many keys expire
-  - Hot Key | One key overloaded
-  - Cache Inconsistency | DB ≠ Redis
+  - Cache-Aside | High cache miss | DB fallback carefully | Proper cache strategy
+  - TTL | Stale/expired cache | Refresh cache | Correct TTL strategy
+  - Stampede | Huge simultaneous misses | Lock/single-flight | TTL jitter + refresh-ahead
+  - Penetration | Many nonexistent requests | Negative cache | Bloom filter + validation
+  - Avalanche | Many keys expire | Protect DB | TTL jitter + cache warming
+  - Hot Key | One key overloaded | Local cache/replicas | Hot-key sharding/detection
+  - Cache Inconsistency | DB ≠ Redis | Invalidate/refresh | Consistent cache update strategy
     
   - DB Pool
   - Slow Query
